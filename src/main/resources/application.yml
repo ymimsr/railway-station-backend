@@ -1,0 +1,15 @@
+
+spring:
+  profiles:
+    active: local
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/railway_station
+    username: railway_station
+    password: some_hard_ass_password_542
+    driver-class-name: org.postgresql.Driver
