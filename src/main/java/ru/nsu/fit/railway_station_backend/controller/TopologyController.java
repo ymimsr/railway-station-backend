@@ -3,7 +3,9 @@ package ru.nsu.fit.railway_station_backend.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.nsu.fit.railway_station_backend.dto.*;
+import ru.nsu.fit.railway_station_backend.dto.service.enums.SignalState;
+import ru.nsu.fit.railway_station_backend.dto.service.enums.TrainType;
+import ru.nsu.fit.railway_station_backend.dto.service.topology.*;
 
 import java.util.Set;
 import java.util.UUID;
@@ -12,7 +14,7 @@ import java.util.UUID;
 @RequestMapping("/topology")
 public class TopologyController {
 
-    @GetMapping("/")
+    @GetMapping()
     @SuppressWarnings("all")
     public Topology getTopology() {
         Node node1 = new Node();
