@@ -12,7 +12,7 @@ import java.util.UUID;
 @RequestMapping("/topology")
 public class TopologyController {
 
-    @GetMapping("/topology")
+    @GetMapping("/")
     @SuppressWarnings("all")
     public Topology getTopology() {
         Node node1 = new Node();
