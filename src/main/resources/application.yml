@@ -13,3 +13,6 @@ spring:
     username: railway_station
     password: some_hard_ass_password_542
     driver-class-name: org.postgresql.Driver
+
+front-end:
+  address: http://localhost:5173

@@ -1,9 +1,9 @@
-package ru.nsu.fit.railway_station_backend.dto.service.topology;
+package ru.nsu.fit.railway_station_backend.dto.service.statics.topology;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-import ru.nsu.fit.railway_station_backend.dto.service.enums.TrainType;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
 
 import java.util.Set;
 import java.util.UUID;
