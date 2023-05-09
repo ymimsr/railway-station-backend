@@ -1,17 +1,23 @@
 package ru.nsu.fit.railway_station_backend.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.nsu.fit.railway_station_backend.dto.service.enums.SignalState;
-import ru.nsu.fit.railway_station_backend.dto.service.enums.TrainType;
-import ru.nsu.fit.railway_station_backend.dto.service.topology.*;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.SignalState;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Node;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Signal;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Switch;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Topology;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Track;
 
 import java.util.Set;
 import java.util.UUID;
 
 @RestController
 @RequestMapping("/topology")
+@RequiredArgsConstructor
 public class TopologyController {
 
     @GetMapping()

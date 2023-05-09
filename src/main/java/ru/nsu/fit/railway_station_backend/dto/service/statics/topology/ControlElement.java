@@ -1,4 +1,4 @@
-package ru.nsu.fit.railway_station_backend.dto.service.topology;
+package ru.nsu.fit.railway_station_backend.dto.service.statics.topology;
 
 import java.util.UUID;
 

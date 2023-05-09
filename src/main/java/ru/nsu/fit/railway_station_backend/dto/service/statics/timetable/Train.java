@@ -1,9 +1,9 @@
-package ru.nsu.fit.railway_station_backend.dto.service.timetable;
+package ru.nsu.fit.railway_station_backend.dto.service.statics.timetable;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.nsu.fit.railway_station_backend.dto.service.enums.TrainType;
-import ru.nsu.fit.railway_station_backend.dto.service.topology.Track;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Track;
 
 import java.util.UUID;
 
