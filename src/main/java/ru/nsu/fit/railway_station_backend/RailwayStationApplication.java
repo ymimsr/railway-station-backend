@@ -6,10 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
-@SpringBootApplication(
-        // убрать exclude после поднятия бд
-        exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class}
-)
+@SpringBootApplication
 public class RailwayStationApplication {
 
     public static void main(String[] args) {
