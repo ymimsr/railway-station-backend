@@ -9,10 +9,10 @@ import java.util.Set;
 
 @Getter
 @Setter
-public class Topology {
+public class TopologyDto {
 
-    private Set<Track> tracks;
+    private Set<TrackDto> tracks;
 
-    private Set<Node> nodes;
+    private Set<NodeDto> nodes;
 
 }

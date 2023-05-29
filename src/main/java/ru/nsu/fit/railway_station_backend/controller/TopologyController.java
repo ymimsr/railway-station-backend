@@ -1,7 +1,6 @@
 package ru.nsu.fit.railway_station_backend.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,19 +11,14 @@ import ru.nsu.fit.railway_station_backend.dao.entity.Switch;
 import ru.nsu.fit.railway_station_backend.dao.entity.Track;
 import ru.nsu.fit.railway_station_backend.dao.repository.NodeRepository;
 import ru.nsu.fit.railway_station_backend.dao.repository.TrackRepository;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.SignalState;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.NodeDto;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.SignalDto;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.SwitchDto;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Topology;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TrackDto;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TopologyDto;
 import ru.nsu.fit.railway_station_backend.mapping.NodeMapper;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/topology")
@@ -39,7 +33,7 @@ public class TopologyController {
     private NodeMapper nodeMapper;
     @GetMapping()
     @SuppressWarnings("all")
-    public Topology getTopology() {
+    public void uploadTestTopology() {
         Node node1 = new Node();
         Node node2 = new Node();
         Node node3 = new Node();
@@ -157,8 +151,7 @@ public class TopologyController {
         //track8.setCanServeInitial(Set.of(TrainType.PASS));
         //track8.setIsActive(true);
 
-        Topology topology = new Topology();
-        topology.setNodes(Set.of(
+        nodeRepository.saveAll(Set.of(
                 node1,
                 node2,
                 node3,
@@ -168,22 +161,6 @@ public class TopologyController {
                 node7,
                 node8
         ));
-        topology.setTracks(Set.of(
-                track1,
-                track2,
-                track3,
-                track4,
-                track5,
-                track6,
-                track7,
-                track8
-        ));
-
-        //trackRepository.saveAll(topology.getTracks());
-        //nodeRepository.(topology.getNodes());
-        nodeRepository.saveAll(topology.getNodes());
-
-        return topology;
     }
 
     @GetMapping("/test-mapping")

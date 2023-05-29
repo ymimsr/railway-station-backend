@@ -21,6 +21,8 @@ public interface NodeMapper {
 
     NodeDto nodeToNodeDto(Node node);
 
+    List<NodeDto> nodesToNodeDtos(List<Node> nodeDtos);
+
     @AfterMapping
     default void addRelations(@MappingTarget NodeDto nodeDto) {
         if (nodeDto.getASwitch() != null) {
