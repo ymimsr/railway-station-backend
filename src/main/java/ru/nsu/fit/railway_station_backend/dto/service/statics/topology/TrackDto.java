@@ -10,22 +10,20 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class Track {
+public class TrackDto {
 
-    private UUID uuid;
+    private UUID id;
 
     private Integer length;
 
     private Set<TrainType> canServe;
 
-    private Set<TrainType> canServeInitial;
-
-    private Boolean isActive;
+    private Boolean isActive = Boolean.TRUE;
 
     @JsonIgnore
-    private Node startNode;
+    private NodeDto startNode;
 
     @JsonIgnore
-    private Node endNode;
+    private NodeDto endNode;
 
 }

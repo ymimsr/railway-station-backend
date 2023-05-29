@@ -3,15 +3,15 @@ package ru.nsu.fit.railway_station_backend.dto.service.statics.timetable;
 import lombok.Getter;
 import lombok.Setter;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.Track;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TrackDto;
 
 import java.util.UUID;
 
 @Getter
 @Setter
-public class Train {
+public class TrainDto {
 
-    private UUID uuid;
+    private UUID id;
 
     private Integer length;
 
@@ -19,6 +19,6 @@ public class Train {
 
     private TrainType trainType;
 
-    private Track occupiedTrack;
+    private TrackDto occupiedTrack;
 
 }

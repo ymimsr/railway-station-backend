@@ -1,5 +1,6 @@
 package ru.nsu.fit.railway_station_backend.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,11 +28,13 @@ public class Track {
     @Column(name = "length")
     private Integer length;
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "start_node_id")
     private Node startNode;
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "end_node_id")
     private Node endNode;
 

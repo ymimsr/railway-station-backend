@@ -8,11 +8,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL82Dialect
+    show-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/railway_station_db
     username: railway_station
     password: popdeK2la
     driver-class-name: org.postgresql.Driver
+
 
 front-end:
   address: http://localhost:5173

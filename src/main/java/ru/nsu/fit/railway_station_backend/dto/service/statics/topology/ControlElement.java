@@ -6,6 +6,6 @@ public interface ControlElement {
 
     UUID getId();
 
-    Node getNode();
+    NodeDto getNode();
 
 }

@@ -18,18 +18,16 @@ public class Node {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @OneToMany(mappedBy = "startNode")
+    @OneToMany(mappedBy = "startNode", cascade = CascadeType.PERSIST)
     private Set<Track> inTracks;
 
-    @OneToMany(mappedBy = "endNode")
+    @OneToMany(mappedBy = "endNode", cascade = CascadeType.PERSIST)
     private Set<Track> outTracks;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "signal_id", referencedColumnName = "signal_id")
+    @OneToOne(mappedBy = "node", cascade = CascadeType.PERSIST)
     private Signal nodeSignal;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "switch_id", referencedColumnName = "switch_id")
+    @OneToOne(mappedBy = "node", cascade = CascadeType.PERSIST)
     private Switch nodeSwitch;
 
 }

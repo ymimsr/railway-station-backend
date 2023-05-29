@@ -1,5 +1,6 @@
 package ru.nsu.fit.railway_station_backend.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +18,9 @@ public class Signal {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @OneToOne(mappedBy = "nodeSignal")
+    @JsonIgnore
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "node_id")
     private Node node;
 
 }
