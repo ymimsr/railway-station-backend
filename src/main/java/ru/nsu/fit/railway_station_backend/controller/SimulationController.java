@@ -4,8 +4,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.nsu.fit.railway_station_backend.dao.entity.Track;
 import ru.nsu.fit.railway_station_backend.dao.entity.Train;
 import ru.nsu.fit.railway_station_backend.dao.repository.NodeRepository;
+import ru.nsu.fit.railway_station_backend.dao.repository.TrackRepository;
 import ru.nsu.fit.railway_station_backend.dto.api.SimulationResponse;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.timetable.TrainDto;
@@ -25,8 +27,9 @@ public class SimulationController {
 
     private final NodeMapper nodeMapper;
     private final NodeRepository nodeRepository;
+    private final TrackRepository trackRepository;
+
     private TrainDto trainDto;
-    private List<NodeDto> nodeDtos;
 
 
     @GetMapping
@@ -41,8 +44,10 @@ public class SimulationController {
     @GetMapping("/next")
     public SimulationResponse nextStep() {
         SimulationResponse simulationResponse = new SimulationResponse();
-        this.nodeDtos = nodeMapper.nodesToNodeDtos(nodeRepository.findAll());
+        List<NodeDto> nodeDtos = nodeMapper.nodesToNodeDtos(nodeRepository.findAll());
+        List<Track> trackDtos = trackRepository.findAll();
         simulationResponse.setNodes(nodeDtos);
+        simulationResponse.setTracks(trackDtos);
 
         TrackDto randomTrack = null;
         while (randomTrack == null) {
