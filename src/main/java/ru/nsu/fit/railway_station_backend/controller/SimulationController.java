@@ -15,6 +15,7 @@ import ru.nsu.fit.railway_station_backend.mapping.NodeMapper;
 
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 @RestController
@@ -31,6 +32,7 @@ public class SimulationController {
     @GetMapping
     public void startSimulation() {
         trainDto = new TrainDto();
+        trainDto.setId(UUID.randomUUID());
         trainDto.setTrainType(TrainType.PASS);
         trainDto.setLength(1);
         trainDto.setSpeed(10);
