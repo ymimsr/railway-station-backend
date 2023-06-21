@@ -1,6 +1,7 @@
 package ru.nsu.fit.railway_station_backend.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import ru.nsu.fit.railway_station_backend.dao.entity.TimetableEntry;
 import ru.nsu.fit.railway_station_backend.dao.entity.Train;
 import ru.nsu.fit.railway_station_backend.dao.repository.NodeRepository;
 import ru.nsu.fit.railway_station_backend.dao.repository.TimetableEntryRepository;
+import ru.nsu.fit.railway_station_backend.dao.repository.TrainRepository;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.timetable.TimetableEntryDto;
 import ru.nsu.fit.railway_station_backend.mapping.TimetableEntryMapper;
@@ -22,11 +24,14 @@ import java.util.List;
 @RequestMapping("/timetable")
 @RequiredArgsConstructor
 public class TimetableController {
-
+    @Autowired
     private final TimetableEntryMapper entryMapper;
+    @Autowired
     private TimetableEntryRepository entryRepository;
-
+    @Autowired
     private NodeRepository nodeRepository;
+    @Autowired
+    private TrainRepository trainRepository;
 
     @GetMapping()
     @SuppressWarnings("all")
@@ -52,6 +57,8 @@ public class TimetableController {
         train3.setTrainType(TrainType.PASSENGER);
         train3.setLength(2);
         train3.setSpeed(2);
+
+        trainRepository.saveAll(List.of(train1,train2,train3));
 
         TimetableEntry entry1 = new TimetableEntry();
         TimetableEntry entry2 = new TimetableEntry();
