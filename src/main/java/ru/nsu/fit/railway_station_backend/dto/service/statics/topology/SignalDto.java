@@ -16,6 +16,6 @@ public class SignalDto implements ControlElement {
     @JsonIgnore
     private NodeDto node;
 
-    private SignalState currentState;
+    private SignalState currentState = SignalState.GO;
 
 }

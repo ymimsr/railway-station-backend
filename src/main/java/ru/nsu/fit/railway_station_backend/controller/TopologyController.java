@@ -13,7 +13,6 @@ import ru.nsu.fit.railway_station_backend.dao.repository.NodeRepository;
 import ru.nsu.fit.railway_station_backend.dao.repository.TrackRepository;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.NodeDto;
-import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TopologyDto;
 import ru.nsu.fit.railway_station_backend.mapping.NodeMapper;
 
 import java.util.ArrayList;
@@ -58,8 +57,8 @@ public class TopologyController {
 
         Switch switch1 = new Switch();
         switch1.setNode(node6);
-        switch1.setFromTrack(track6);
-        switch1.setToTracks(Set.of(track7, track8));
+        switch1.setTrackFrom(track6);
+        switch1.setTracksTo(Set.of(track7, track8));
         //switch1.setCurrentTrackTo(track8);
 
         node1.setInTracks(Set.of());
@@ -68,7 +67,7 @@ public class TopologyController {
 
         node2.setInTracks(Set.of(track1));
         node2.setOutTracks(Set.of(track3));
-        node2.setNodeSignal(signal1);
+        node2.setSignal(signal1);
 
         node3.setInTracks(Set.of(track3));
         node3.setOutTracks(Set.of(track5));
@@ -84,7 +83,7 @@ public class TopologyController {
 
         node6.setInTracks(Set.of(track5, track6));
         node6.setOutTracks(Set.of(track7, track8));
-        node6.setNodeSwitch(switch1);
+        node6.setASwitch(switch1);
         //node6.setControlElements(Set.of(switch1));
 
         node7.setInTracks(Set.of(track7));

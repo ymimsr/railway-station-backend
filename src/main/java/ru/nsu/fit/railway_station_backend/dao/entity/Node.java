@@ -25,9 +25,9 @@ public class Node {
     private Set<Track> outTracks;
 
     @OneToOne(mappedBy = "node", cascade = CascadeType.PERSIST)
-    private Signal nodeSignal;
+    private Signal signal;
 
     @OneToOne(mappedBy = "node", cascade = CascadeType.PERSIST)
-    private Switch nodeSwitch;
+    private Switch aSwitch;
 
 }

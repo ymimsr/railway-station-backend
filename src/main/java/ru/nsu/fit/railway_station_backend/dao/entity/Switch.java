@@ -26,7 +26,7 @@ public class Switch {
 
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "from_track")
-    private Track fromTrack;
+    private Track trackFrom;
 
     @ManyToMany
     @JoinTable(
@@ -34,6 +34,6 @@ public class Switch {
             joinColumns = { @JoinColumn(name = "switch_id") },
             inverseJoinColumns = { @JoinColumn(name = "track_id") }
     )
-    private Set<Track> toTracks;
+    private Set<Track> tracksTo;
 
 }

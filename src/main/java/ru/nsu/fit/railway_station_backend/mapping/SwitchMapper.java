@@ -2,7 +2,6 @@ package ru.nsu.fit.railway_station_backend.mapping;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
 import ru.nsu.fit.railway_station_backend.dao.entity.Switch;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.SwitchDto;
 
@@ -10,6 +9,6 @@ import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.SwitchDto
 public interface SwitchMapper {
 
     @Mapping(target = "node", ignore = true)
-    SwitchDto switchToSwitchDtoWithoutRelations(Switch nodeSwitch);
+    SwitchDto switchToSwitchDtoWithoutRelations(Switch aSwitch);
 
 }
