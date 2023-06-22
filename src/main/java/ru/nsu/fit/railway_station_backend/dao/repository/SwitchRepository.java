@@ -5,5 +5,5 @@ import ru.nsu.fit.railway_station_backend.dao.entity.Switch;
 
 import java.util.UUID;
 
-public interface SwitchRepository extends JpaRepository<Switch, UUID> {
+public interface SwitchRepository extends JpaRepository<Switch, Long> {
 }

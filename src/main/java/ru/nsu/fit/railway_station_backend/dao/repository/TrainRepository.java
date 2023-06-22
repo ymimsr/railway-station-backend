@@ -5,5 +5,5 @@ import ru.nsu.fit.railway_station_backend.dao.entity.Train;
 
 import java.util.UUID;
 
-public interface TrainRepository extends JpaRepository<Train, UUID> {
+public interface TrainRepository extends JpaRepository<Train, Long> {
 }

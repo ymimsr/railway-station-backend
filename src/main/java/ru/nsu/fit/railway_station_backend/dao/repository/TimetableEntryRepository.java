@@ -5,5 +5,5 @@ import ru.nsu.fit.railway_station_backend.dao.entity.TimetableEntry;
 
 import java.util.UUID;
 
-public interface TimetableEntryRepository extends JpaRepository<TimetableEntry, UUID> {
+public interface TimetableEntryRepository extends JpaRepository<TimetableEntry, Long> {
 }

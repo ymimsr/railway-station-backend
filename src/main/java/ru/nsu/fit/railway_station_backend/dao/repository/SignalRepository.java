@@ -5,5 +5,5 @@ import ru.nsu.fit.railway_station_backend.dao.entity.Signal;
 
 import java.util.UUID;
 
-public interface SignalRepository extends JpaRepository<Signal, UUID> {
+public interface SignalRepository extends JpaRepository<Signal, Long> {
 }

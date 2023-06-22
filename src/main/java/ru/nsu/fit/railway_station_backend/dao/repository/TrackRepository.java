@@ -5,5 +5,5 @@ import ru.nsu.fit.railway_station_backend.dao.entity.Track;
 
 import java.util.UUID;
 
-public interface TrackRepository extends JpaRepository<Track, UUID> {
+public interface TrackRepository extends JpaRepository<Track, Long> {
 }
