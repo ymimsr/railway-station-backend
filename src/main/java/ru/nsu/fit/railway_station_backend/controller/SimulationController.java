@@ -39,7 +39,7 @@ public class SimulationController {
     @GetMapping
     public void startSimulation() {
         trainDto = new TrainDto();
-        trainDto.setId(UUID.randomUUID());
+        trainDto.setId(1L);
         trainDto.setTrainType(TrainType.PASS);
         trainDto.setLength(1);
         trainDto.setSpeed(10);

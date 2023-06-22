@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 public class SwitchDto implements ControlElement {
 
-    private UUID id;
+    private Long id;
 
     @JsonIgnore
     private NodeDto node;

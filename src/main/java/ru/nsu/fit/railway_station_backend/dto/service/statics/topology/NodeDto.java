@@ -12,7 +12,7 @@ import java.util.UUID;
 @Setter
 public class NodeDto {
 
-    private UUID id;
+    private Long id;
 
     private Set<TrackDto> inTracks;
 

@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public interface ControlElement {
 
-    UUID getId();
+    Long getId();
 
     NodeDto getNode();
 

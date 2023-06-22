@@ -17,8 +17,8 @@ public class Track {
 
     @Column(name = "track_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "can_serve")
     @ElementCollection(targetClass = TrainType.class)

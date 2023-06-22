@@ -15,8 +15,8 @@ public class Train {
 
     @Column(name = "train_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "length")
     private Integer length;

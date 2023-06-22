@@ -12,7 +12,7 @@ import java.util.UUID;
 @Setter
 public class TrackDto {
 
-    private UUID id;
+    private Long id;
 
     private Integer length;
 

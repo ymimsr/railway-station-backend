@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 public class TimetableEntryDto {
 
-    private UUID id;
+    private Long id;
 
     private LocalDateTime arrivalTime;
 

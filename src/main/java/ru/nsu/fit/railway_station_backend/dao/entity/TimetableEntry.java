@@ -15,8 +15,8 @@ public class TimetableEntry {
 
     @Column(name = "timetable_entry_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "arrival_time")
     private LocalDateTime arrivalTime;

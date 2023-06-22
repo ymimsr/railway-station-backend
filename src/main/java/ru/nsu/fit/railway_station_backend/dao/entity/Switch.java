@@ -16,8 +16,8 @@ public class Switch {
 
     @Column(name = "switch_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @JsonIgnore
     @OneToOne(fetch = FetchType.EAGER)

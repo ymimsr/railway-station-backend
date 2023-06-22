@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 public class TrainDto {
 
-    private UUID id;
+    private Long id;
 
     private Integer length;
 

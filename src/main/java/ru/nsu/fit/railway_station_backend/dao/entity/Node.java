@@ -15,8 +15,8 @@ public class Node {
 
     @Column(name = "node_id")
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @OneToMany(mappedBy = "startNode", cascade = CascadeType.PERSIST)
     private Set<Track> inTracks;
