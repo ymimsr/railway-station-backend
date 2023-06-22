@@ -6,5 +6,7 @@ import ru.nsu.fit.railway_station_backend.dto.service.statics.timetable.Timetabl
 
 @Mapper(componentModel = "spring", uses = {NodeMapper.class, TrainMapper.class})
 public interface TimetableEntryMapper {
+
     TimetableEntryDto timetableEntryDtoFromTimetableEntry(TimetableEntry entry);
+
 }

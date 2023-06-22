@@ -9,6 +9,7 @@ import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.NodeDto;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TopologyDto;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TrackDto;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -19,5 +20,6 @@ public class SimulationResponse {
     private List<NodeDto> nodes;
     private List<Track> tracks;
     private List<TrainDto> trains;
+    private LocalDateTime timestamp;
 
 }

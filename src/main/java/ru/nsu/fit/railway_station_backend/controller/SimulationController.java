@@ -15,6 +15,9 @@ import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.NodeDto;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.topology.TrackDto;
 import ru.nsu.fit.railway_station_backend.mapping.NodeMapper;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -30,6 +33,7 @@ public class SimulationController {
     private final TrackRepository trackRepository;
 
     private TrainDto trainDto;
+    private LocalDateTime timestamp;
 
 
     @GetMapping
@@ -39,6 +43,8 @@ public class SimulationController {
         trainDto.setTrainType(TrainType.PASS);
         trainDto.setLength(1);
         trainDto.setSpeed(10);
+
+        timestamp = LocalDateTime.of(1970, 1, 1, 0, 0);
     }
 
     @GetMapping("/next")
@@ -48,6 +54,8 @@ public class SimulationController {
         List<Track> trackDtos = trackRepository.findAll();
         simulationResponse.setNodes(nodeDtos);
         simulationResponse.setTracks(trackDtos);
+        simulationResponse.setTimestamp(timestamp);
+        timestamp = timestamp.plus(10, ChronoUnit.MINUTES);
 
         TrackDto randomTrack = null;
         while (randomTrack == null) {

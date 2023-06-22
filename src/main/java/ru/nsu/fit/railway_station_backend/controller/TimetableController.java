@@ -24,14 +24,11 @@ import java.util.List;
 @RequestMapping("/timetable")
 @RequiredArgsConstructor
 public class TimetableController {
-    @Autowired
+
     private final TimetableEntryMapper entryMapper;
-    @Autowired
-    private TimetableEntryRepository entryRepository;
-    @Autowired
-    private NodeRepository nodeRepository;
-    @Autowired
-    private TrainRepository trainRepository;
+    private final TimetableEntryRepository entryRepository;
+    private final NodeRepository nodeRepository;
+    private final TrainRepository trainRepository;
 
     @GetMapping()
     @SuppressWarnings("all")

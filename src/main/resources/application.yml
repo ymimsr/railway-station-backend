@@ -18,3 +18,6 @@ spring:
 
 front-end:
   address: http://localhost:5173
+
+prolog:
+  filename: planner.pl
