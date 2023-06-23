@@ -19,9 +19,9 @@ public class Connection {
     private Integer length;
 
     @OneToOne
-    private Station inStation;
+    private Station fromStation;
 
     @OneToOne
-    private Station outStation;
+    private Station toStation;
 
 }

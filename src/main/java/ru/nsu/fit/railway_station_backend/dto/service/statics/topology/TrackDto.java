@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
+import ru.nsu.fit.railway_station_backend.dto.service.statics.timetable.TrainDto;
 
 import java.util.Set;
 import java.util.UUID;
@@ -25,5 +26,7 @@ public class TrackDto {
 
     @JsonIgnore
     private NodeDto endNode;
+
+    private TrainDto currentTrain;
 
 }

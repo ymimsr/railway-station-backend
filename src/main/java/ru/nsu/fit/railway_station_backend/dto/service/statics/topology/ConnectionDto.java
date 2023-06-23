@@ -10,8 +10,10 @@ public class ConnectionDto {
 
     private Long id;
 
-    private Station inStation;
+    private Integer length;
 
-    private Station outStation;
+    private StationDto fromStation;
+
+    private StationDto toStation;
 
 }

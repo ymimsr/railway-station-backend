@@ -13,7 +13,9 @@ public class TimetableEntryDto {
 
     private Long id;
 
-    private LocalDateTime arrivalTime;
+    private LocalDateTime arrivalIntervalStart;
+
+    private LocalDateTime arrivalIntervalFinish;
 
     private Integer stationingTime;
 

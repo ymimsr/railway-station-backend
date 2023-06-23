@@ -18,7 +18,7 @@ import java.util.Set;
 public class SimulationResponse {
 
     private List<NodeDto> nodes;
-    private List<Track> tracks;
+    private List<TrackDto> tracks;
     private List<TrainDto> trains;
     private LocalDateTime timestamp;
 

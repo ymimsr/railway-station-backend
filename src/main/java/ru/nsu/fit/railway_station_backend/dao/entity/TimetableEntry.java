@@ -18,8 +18,11 @@ public class TimetableEntry {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "arrival_time")
-    private LocalDateTime arrivalTime;
+    @Column(name = "arrival_interval_start")
+    private LocalDateTime arrivalIntervalStart;
+
+    @Column(name = "arrival_interval_finish")
+    private LocalDateTime arrivalIntervalFinish;
 
     @Column(name = "stationing_time")
     private Integer stationingTime;

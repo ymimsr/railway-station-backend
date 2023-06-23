@@ -49,7 +49,7 @@ public class TimetableController {
 
         train2.setTrainType(TrainType.CARGO);
         train2.setLength(2);
-        train1.setSpeed(2);
+        train2.setSpeed(2);
 
         train3.setTrainType(TrainType.PASSENGER);
         train3.setLength(2);
@@ -63,19 +63,22 @@ public class TimetableController {
 
         entry1.setInputNode(startNode);
         entry1.setEndNode(finishNode);
-        entry1.setArrivalTime(LocalDateTime.of(date, LocalTime.of(3,22)));
+        entry1.setArrivalIntervalStart(LocalDateTime.of(date, LocalTime.of(3,22)));
+        entry1.setArrivalIntervalFinish(LocalDateTime.of(date, LocalTime.of(3,25)));
         entry1.setTrain(train1);
         entry1.setStationingTime(0);
 
         entry2.setInputNode(startNode);
         entry2.setEndNode(finishNode);
-        entry2.setArrivalTime(LocalDateTime.of(date, LocalTime.of(10,50)));
+        entry2.setArrivalIntervalStart(LocalDateTime.of(date, LocalTime.of(10,50)));
+        entry2.setArrivalIntervalFinish(LocalDateTime.of(date, LocalTime.of(10,57)));
         entry2.setTrain(train2);
         entry2.setStationingTime(40);
 
         entry3.setInputNode(startNode);
         entry3.setEndNode(finishNode);
-        entry3.setArrivalTime(LocalDateTime.of(date, LocalTime.of(22,31)));
+        entry3.setArrivalIntervalStart(LocalDateTime.of(date, LocalTime.of(22,31)));
+        entry3.setArrivalIntervalFinish(LocalDateTime.of(date, LocalTime.of(22,37)));
         entry3.setTrain(train3);
         entry3.setStationingTime(20);
 

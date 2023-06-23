@@ -18,7 +18,7 @@ public class PrologConfiguration {
     @Bean
     public Projog projogBean() {
         Projog projog = new Projog();
-        //projog.consultFile(new File(prologProperties.getPrologAlgorithmPath()));
+        projog.consultFile(new File(PrologConfiguration.class.getResource(prologProperties.getFilename()).getFile()));
 
         return projog;
     }

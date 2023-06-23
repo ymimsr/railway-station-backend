@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import ru.nsu.fit.railway_station_backend.dto.service.statics.enums.TrainType;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -23,7 +24,7 @@ public class Track {
     @Column(name = "can_serve")
     @ElementCollection(targetClass = TrainType.class)
     @Enumerated
-    private Set<TrainType> canServe;
+    private List<TrainType> canServe;
 
     @Column(name = "length")
     private Integer length;

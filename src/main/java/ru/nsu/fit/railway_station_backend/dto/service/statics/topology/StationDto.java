@@ -12,10 +12,12 @@ public class StationDto {
 
     private Long id;
 
-    private List<Node> nodes;
+    private String name;
 
-    private List<Node> inputNodes;
+    private List<NodeDto> nodes;
 
-    private List<Node> outputNodes;
+    private List<NodeDto> inputNodes;
+
+    private List<NodeDto> outputNodes;
 
 }

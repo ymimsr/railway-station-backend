@@ -5,6 +5,7 @@ import lombok.Setter;
 import ru.nsu.fit.railway_station_backend.dao.entity.Signal;
 import ru.nsu.fit.railway_station_backend.dao.entity.Switch;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -14,9 +15,9 @@ public class NodeDto {
 
     private Long id;
 
-    private Set<TrackDto> inTracks;
+    private List<TrackDto> inTracks;
 
-    private Set<TrackDto> outTracks;
+    private List<TrackDto> outTracks;
 
     private SignalDto signal;
 

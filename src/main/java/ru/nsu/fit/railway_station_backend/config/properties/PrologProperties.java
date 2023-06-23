@@ -11,6 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @Setter
 public class PrologProperties {
 
-    private String prologAlgorithmPath;
+    private String filename;
 
 }
